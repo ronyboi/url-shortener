@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function InputUrl() {
+export default function InputUrl({ updateOnSubmit }) {
   const classes = useStyles();
   const [url, setUrl] = useState("");
 
@@ -26,6 +26,7 @@ export default function InputUrl() {
       body: JSON.stringify({ longUrl: url }),
     };
     fetch("/api/", requestOptions);
+    updateOnSubmit();
   };
 
   return (

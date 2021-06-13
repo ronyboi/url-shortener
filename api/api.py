@@ -1,6 +1,6 @@
 from flask import Flask, config, request
 from flask_mongoengine import MongoEngine
-import time
+import datetime
 import json
 import uuid
 
@@ -18,7 +18,8 @@ db = MongoEngine(app)
 class Url(db.Document):
     longUrl: str = db.StringField(required=True)
     shortUrl: str = db.StringField(required=True)
-    date_created = db.StringField(default=time.ctime(time.time()))
+    date_created = db.StringField(
+        default=(datetime.datetime.now()).strftime("%c"))
 
     def to_json(self):
         return {"longUrl": self.longUrl,
@@ -26,17 +27,13 @@ class Url(db.Document):
                 "date_created": self.date_created}
 
 
-@app.get('/api/time')
-def get_time():
-    return {"time": time.time()}
-
-
 @app.put('/api/')
 def create_url():
     record = json.loads(request.data)
     print(record)
     url = Url(longUrl=record['longUrl'],
-              shortUrl=(str(uuid.uuid1())).split("-")[0])
+              shortUrl=(str(uuid.uuid1())).split("-")[0],
+              date_created=(datetime.datetime.now().strftime("%c")))
     url.save()
     return (url.to_json())
 
