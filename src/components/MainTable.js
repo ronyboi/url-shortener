@@ -31,7 +31,7 @@ const StyledTableRow = withStyles((theme) => ({
 const useStyles = makeStyles({
   table: {
     maxWidth: 700,
-    margin: "auto",
+    minWidth: 700,
   },
 });
 
