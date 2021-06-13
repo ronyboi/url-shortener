@@ -40,20 +40,32 @@ def create_url():
     url.save()
     return (url.to_json())
 
+
 @app.get('/api/getAll')
 def get_allUrls():
     urls = Url.objects()
     if not urls:
         return({'error': 'data not found'})
     else:
-        urlDict = {}
+        urlDict = []
         i = 0
         for url in urls:
-            urlDict[i] = url.to_json()
+            urlDict.append(url.to_json())
             i += 1
-        return urlDict
+        return json.dumps(urlDict)
 
-@app.get('/<shortUrl>')
+
+@app.delete('/api/delete/<shortUrl>')
+def delete_url(shortUrl):
+    url = Url.objects(shortUrl=shortUrl).first()
+    if not url:
+        return ({'error': 'data not found'})
+    else:
+        url.delete()
+    return (url.to_json())
+
+
+@app.get('/api/<shortUrl>')
 def get_url(shortUrl):
     url = Url.objects(shortUrl=shortUrl).first()
     if not url:
