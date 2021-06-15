@@ -21,6 +21,8 @@ config.json
 
 __pycache__
 
+api/.gitignore
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
