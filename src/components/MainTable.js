@@ -45,7 +45,7 @@ function MainTable() {
   const [submit, setUpdate] = useState(true);
 
   useEffect(() => {
-    fetch(api + "/api/getAll")
+    fetch("/api/getAll")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [del, submit]);
@@ -77,7 +77,9 @@ function MainTable() {
                     <a href={row.longUrl}>{row.longUrl}</a>
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    <a href={api + "/" + row.shortUrl}>{row.shortUrl}</a>
+                    <a href={"http://localhost:3000/" + row.shortUrl}>
+                      {row.shortUrl}
+                    </a>
                   </StyledTableCell>
                   <StyledTableCell align="right">
                     {row.date_created}
@@ -86,7 +88,7 @@ function MainTable() {
                     <Button
                       color="inherit"
                       onClick={() => {
-                        fetch(api + "/api/delete/" + row.shortUrl, {
+                        fetch("/api/delete/" + row.shortUrl, {
                           method: "DELETE",
                         }).then(() => setDel(!del));
                       }}

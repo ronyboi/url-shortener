@@ -7,9 +7,10 @@ export default function GoTo() {
 
   useEffect(() => {
     const requestOptions = {
+      mode: "no-cors", // 'cors' by default
       method: "GET",
     };
-    fetch(api + "/api/" + shortUrl, requestOptions)
+    fetch("/api/" + shortUrl, requestOptions)
       .then((res) => res.json())
       .then((data) => (window.location.href = data.longUrl));
   }, []);

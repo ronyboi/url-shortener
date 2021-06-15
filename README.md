@@ -21,3 +21,10 @@ As of (14th Jun, 2021), I'm still working on creating a production build for the
 - CSS
 - Flask (MongoEngine)
 - MongoDB (NoSQL Database)
+
+## Updates
+
+(15th Jun, 2021) Successfully running the api on heroku using gunicorn. 
+
+To be added:
+1. Working front end deployment.
