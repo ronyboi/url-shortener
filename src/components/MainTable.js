@@ -12,6 +12,8 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Button } from "@material-ui/core";
 
+import { api } from "./config.json";
+
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: theme.palette.common.black,
@@ -43,7 +45,7 @@ function MainTable() {
   const [submit, setUpdate] = useState(true);
 
   useEffect(() => {
-    fetch("/api/getAll")
+    fetch(api + "/api/getAll")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [del, submit]);
@@ -75,9 +77,7 @@ function MainTable() {
                     <a href={row.longUrl}>{row.longUrl}</a>
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    <a href={"http://localhost:3000/" + row.shortUrl}>
-                      {row.shortUrl}
-                    </a>
+                    <a href={api + "/" + row.shortUrl}>{row.shortUrl}</a>
                   </StyledTableCell>
                   <StyledTableCell align="right">
                     {row.date_created}
@@ -86,7 +86,7 @@ function MainTable() {
                     <Button
                       color="inherit"
                       onClick={() => {
-                        fetch("/api/delete/" + row.shortUrl, {
+                        fetch(api + "/api/delete/" + row.shortUrl, {
                           method: "DELETE",
                         }).then(() => setDel(!del));
                       }}

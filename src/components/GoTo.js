@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { api } from "./config.json";
 
 export default function GoTo() {
   const { shortUrl } = useParams();
@@ -8,7 +9,7 @@ export default function GoTo() {
     const requestOptions = {
       method: "GET",
     };
-    fetch("/api/" + shortUrl, requestOptions)
+    fetch(api + "/api/" + shortUrl, requestOptions)
       .then((res) => res.json())
       .then((data) => (window.location.href = data.longUrl));
   }, []);

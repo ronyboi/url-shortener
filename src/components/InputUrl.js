@@ -3,6 +3,7 @@ import "../App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import { api } from "./config.json";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +26,7 @@ export default function InputUrl({ updateOnSubmit }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ longUrl: url }),
     };
-    fetch("/api/", requestOptions);
+    fetch(api + "/api/", requestOptions);
     updateOnSubmit();
   };
 
