@@ -22,7 +22,6 @@ export default function InputUrl({ updateOnSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const requestOptions = {
-      mode: "no-cors", // 'cors' by default
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ longUrl: url }),
