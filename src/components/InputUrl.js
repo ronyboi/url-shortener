@@ -3,7 +3,7 @@ import "../App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { api } from "./config.json";
+import { api } from "./component_config.json";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { api } from "./config.json";
+import { api } from "./component_config.json";
 
 export default function GoTo() {
   const { shortUrl } = useParams();

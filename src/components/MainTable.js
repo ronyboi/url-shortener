@@ -12,7 +12,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Button } from "@material-ui/core";
 
-import { api } from "./config.json";
+import { api } from "./component_config.json";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
