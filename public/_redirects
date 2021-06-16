@@ -1,2 +1,2 @@
-/api/*  https://ronybot-url-shortener-api.herokuapp.com  200
+/api/*  https://ronybot-url-shortener-api.herokuapp.com/api/:splat  200
 /* /index.html 200
