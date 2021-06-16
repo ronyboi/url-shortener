@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1564daf3-fa5f-4bcc-a33d-fc3d67d92947/deploy-status)](https://app.netlify.com/sites/dazzling-darwin-d56d27/deploys)
+
 # URL - Shortener
 
 Based of the popular web tools such as tinyurl and goo.gle, I decided to create a url shortener using Flask and React.js.
