@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy" : "https://ronybot-url-shortener-api.herokuapp.com",
+  "proxy": "https://ronybot-url-shortener-api.herokuapp.com",
   "engines": {
     "node": "12.x"
   }
