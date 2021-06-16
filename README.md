@@ -4,6 +4,8 @@ Based of the popular web tools such as tinyurl and goo.gle, I decided to create 
 
 ## How do I use it?
 
+**Update: The website is now live [here.](https://dazzling-darwin-d56d27.netlify.app/)**
+
 As of (14th Jun, 2021), I'm still working on creating a production build for the same. However, you can still test out this application using localhost. 
 
 - Clone the repository onto your local desktop. 
@@ -21,10 +23,13 @@ As of (14th Jun, 2021), I'm still working on creating a production build for the
 - CSS
 - Flask (MongoEngine)
 - MongoDB (NoSQL Database)
+- Heroku for Backend / Flask API
+- Netlify for Frontend
 
 ## Updates
 
 (15th Jun, 2021) Successfully running the api on heroku using gunicorn. 
+(16th Jun, 2021) Successfully deployed working front end to netlify.
 
 To be added:
-1. Working front end deployment.
+1. Working front end deployment. **Done**
