@@ -12,7 +12,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Button } from "@material-ui/core";
 
-import { api } from "./component_config.json";
+import { api, website } from "./component_config.json";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -77,9 +77,7 @@ function MainTable() {
                     <a href={row.longUrl}>{row.longUrl}</a>
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    <a href={"http://localhost:3000/" + row.shortUrl}>
-                      {row.shortUrl}
-                    </a>
+                    <a href={website + row.shortUrl}>{row.shortUrl}</a>
                   </StyledTableCell>
                   <StyledTableCell align="right">
                     {row.date_created}
