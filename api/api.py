@@ -15,6 +15,10 @@ app.config['MONGODB_HOST'] = "mongodb+srv://rohan:"+data["db_password"] + \
 db = MongoEngine(app)
 
 
+# class User(db.Document):
+#     return None
+
+
 class Url(db.Document):
     longUrl: str = db.StringField(required=True)
     shortUrl: str = db.StringField(required=True)
