@@ -33,6 +33,9 @@ As of (14th Jun, 2021), I'm still working on creating a production build for the
 (15th Jun, 2021) Successfully running the api on heroku using gunicorn. 
 (16th Jun, 2021) Successfully deployed working front end to netlify.
 
-To be added:
+## Bugs identified:
+1. Extremely long urls do not bode well with the table format.
+
+## To be added:
 1. Working front end deployment. **Done**
 2. User-specific links. Add a token based system?
