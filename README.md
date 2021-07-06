@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1564daf3-fa5f-4bcc-a33d-fc3d67d92947/deploy-status)](https://app.netlify.com/sites/dazzling-darwin-d56d27/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1564daf3-fa5f-4bcc-a33d-fc3d67d92947/deploy-status)](https://app.netlify.com/sites/rohan-short/deploys)
 
 # URL - Shortener
 
@@ -6,7 +6,7 @@ Based of the popular web tools such as tinyurl and goo.gle, I decided to create 
 
 ## How do I use it?
 
-**Update: The website is now live [here.](https://dazzling-darwin-d56d27.netlify.app/)**
+**Update: The website is now live [here.](https://rohan-short.netlify.app/)**
 
 As of (14th Jun, 2021), I'm still working on creating a production build for the same. However, you can still test out this application using localhost. 
 
